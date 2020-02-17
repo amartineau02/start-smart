@@ -1,5 +1,28 @@
-header {
+body {
+	font-family: $font;
+	background-color: $pale;
+	color: $red;
+}
 
+
+
+header {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	width: 100%;
+	background-color: none;
+	img {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+		justify-self: center;
+		margin-top: 4rem;
+		width: 70%;
+	}
+	nav {
+		display: none;
+	}
 }
 
 
