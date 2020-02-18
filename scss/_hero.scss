@@ -3,7 +3,17 @@
 	height: calc(100vh - 95px);
 	padding-top: 2rem;
 	text-align: center;
+	h2 {
+		padding: 0rem 1rem;
+	}
+	h3 {
+		padding-top: 2rem;
+		margin-bottom: 0;
+	}
 	img {
 		width: 50%;
+	}
+	p {
+		margin-top: 0;
 	}
 }
