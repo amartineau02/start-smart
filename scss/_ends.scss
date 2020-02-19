@@ -5,6 +5,10 @@ body {
 	margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 header {
@@ -27,6 +31,46 @@ header {
 	}
 	nav {
 		display: none;
+	}
+	@media screen and (min-width: 60em) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		img {
+			grid-column: 1;
+			grid-row: 1;
+			justify-self: start;
+			margin: 1rem 0rem;
+			padding-left: 2rem;
+		}
+		nav {
+			display: inline-block;
+			grid-column: 2;
+			grid-row: 1;
+			ul {
+				display: grid;
+				grid-template-columns: repeat(3, auto);
+				grid-template-rows: 1fr;
+				list-style-type: none;
+				a {
+					text-decoration: none;
+					color: $red;
+				}
+				.feat {
+					grid-column: 1;
+					grid-row: 1;
+				}
+				.ques {
+					grid-column: 2;
+					grid-row: 1;
+				}
+				.contact {
+					grid-column: 3;
+					grid-row: 1;
+				}
+			}
+		}
 	}
 }
 
