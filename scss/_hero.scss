@@ -8,11 +8,24 @@
 	height: calc(100vh - 113px);
 	padding-top: 2rem;
 	text-align: center;
+	@media screen and (min-width: 40em) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 15% 75% 10%;
+		height: calc(100vh - 130px);
+	}
 	.lead {
 		grid-column: 1;
 		grid-row: 1;
 		h2 {
 			padding: 0rem 1rem;
+		}
+		@media screen and (min-width: 40em) {
+			grid-column: 1;
+			grid-row: 1;
+			width: 75%;
+			h1 {
+				padding-top: 1rem;
+			}
 		}
 	}
 	img {
@@ -24,6 +37,11 @@
 		object-fit: cover;
 		transform: translateY(2%);
 		z-index: 0;
+		@media screen and (min-width: 40em) {
+			grid-column: 1;
+			grid-row: 2;
+			width: 75%;
+		}
 	}
 	.google {
 		grid-column: 1;
@@ -42,6 +60,18 @@
 		p {
 			margin-top: 0;
 			padding-bottom: 1rem;
+		}
+		@media screen and (min-width: 40em) {
+			grid-column: 1;
+			grid-row: 3;
+			align-self: end;
+			width: 100%;
+			h3, p {
+				padding-top: .5rem;
+			}
+			img {
+				width: 25%;
+			}
 		}
 	}
 }

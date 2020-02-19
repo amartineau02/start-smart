@@ -1,16 +1,25 @@
 .fb {
-	text-align: center;
-	align-items: center;
-	justify-items: center;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(3, 1fr);
-	.reasons {
-		grid-column: 1;
-		grid-row: 1;
+	grid-template-rows: repeat(3, 33%);
+	align-items: center;
+	justify-items: center;
+	text-align: center;
+	.reasons, .skip, .note {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 15% 70% 15%;
+		justify-items: center;
+		@media screen and (min-width: 40em) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			text-align: left;
+		}
+	}
+	.reasons {
+		grid-column: 1;
+		grid-row: 1;
 		h1 {
 			grid-column: 1;
 			grid-row: 1;
@@ -19,23 +28,35 @@
 		img {
 			grid-column: 1;
 			grid-row: 2;
-			width: 100%;
+			width: 80%;
 			object-fit: cover;
 		}
 		p {
 			grid-column: 1;
 			grid-row: 3;
-			padding: 0rem 2rem;
+			padding: 0rem 2rem 2rem 2rem;
+		}
+		@media screen and (min-width: 40em) {
+			h1 {
+				grid-column: 1;
+				grid-row: 1;
+				align-self: end;
+			}
+			img {
+				padding: 1rem 0rem;
+				grid-column: 2;
+				grid-row: 1 / span 2;
+			}
+			p {
+				grid-column: 1;
+				grid-row: 2;
+				align-self: start;
+			}
 		}
 	}
 	.skip {
 		grid-column: 1;
 		grid-row: 2;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 15% 70% 15%;
-		width: 100%;
-		height: 100vh;
 		background-color: darken($pale, 10%);
 		h1 {
 			padding: 1rem 2rem 0rem 2rem;
@@ -45,20 +66,31 @@
 			object-fit: cover;
 		}
 		p {
-			padding: 0rem 2rem;
+			padding: 0rem 2rem 2rem 2rem;
+		}
+		@media screen and (min-width: 40em) {
+			h1 {
+				grid-column: 2;
+				grid-row: 1;
+				align-self: end;
+			}
+			img {
+				padding: 1rem 0rem;
+				grid-column: 1;
+				grid-row: 1 / span 2;
+			}
+			p {
+				grid-column: 2;
+				grid-row: 2;
+				align-self: start;
+			}
 		}
 	}
 	.note {
 		grid-column: 1;
 		grid-row: 3;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 15% 70% 15%;
-		width: 100%;
-		height: 100vh;
 		h1 {
 			padding: 0rem 2rem;
-			margin-bottom: 0;
 		}
 		img {
 			width: 80%;
@@ -66,7 +98,24 @@
 		}
 		p {
 			margin-top: 0;
-			padding: 0rem 2rem;
+			padding: 0rem 2rem 2rem 2rem;
+		}
+		@media screen and (min-width: 40em) {
+			h1 {
+				grid-column: 1;
+				grid-row: 1;
+				align-self: end;
+			}
+			img {
+				padding: 1rem 0rem;
+				grid-column: 2;
+				grid-row: 1 / span 2;
+			}
+			p {
+				grid-column: 1;
+				grid-row: 2;
+				align-self: start;
+			}
 		}
 	}
 }
