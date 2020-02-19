@@ -37,6 +37,7 @@ header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
 		align-items: center;
+		background-color: darken($pale, 10%);
 		img {
 			grid-column: 1;
 			grid-row: 1;
